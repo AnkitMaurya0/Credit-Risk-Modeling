@@ -1,47 +1,62 @@
-/* ==========================================================
-   CREDIT RISK PREDICTION DASHBOARD
-   Professional Dark Banking Theme
-========================================================== */
+/* =====================================================
+   CREDIT RISK DASHBOARD
+   Professional Dark Theme
+===================================================== */
 
-/* ----------------------------
+/* -----------------------------
    GLOBAL
------------------------------*/
+------------------------------*/
 
 html,
 body,
 [class*="css"]{
-    font-family:"Segoe UI",sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
 .stApp{
     background:#111827;
-    color:#f8fafc;
+    color:#F8FAFC;
 }
 
-#MainMenu{visibility:hidden;}
-footer{visibility:hidden;}
-header{visibility:hidden;}
+/* Hide only menu & footer */
 
-/* Reduce page padding */
+#MainMenu{
+    visibility:hidden;
+}
+
+footer{
+    visibility:hidden;
+}
+
+/* DO NOT HIDE HEADER */
+
+/* -----------------------------
+   PAGE CONTAINER
+------------------------------*/
 
 .block-container{
-    padding-top:1.5rem;
-    padding-bottom:1rem;
+
+    padding-top:2rem;
+    padding-bottom:1.5rem;
     padding-left:2rem;
     padding-right:2rem;
+
 }
 
-/* ----------------------------
+/* -----------------------------
    SIDEBAR
------------------------------*/
+------------------------------*/
 
 section[data-testid="stSidebar"]{
 
-    width:220px !important;
-
-    background:#0f172a;
-
+    background:#0F172A;
     border-right:1px solid #334155;
+
+}
+
+section[data-testid="stSidebar"] > div{
+
+    padding-top:1rem;
 
 }
 
@@ -51,9 +66,31 @@ section[data-testid="stSidebar"] *{
 
 }
 
-/* ----------------------------
+/* Sidebar Navigation */
+
+[data-testid="stSidebarNav"]{
+
+    padding-top:10px;
+
+}
+
+[data-testid="stSidebarNav"] a{
+
+    border-radius:10px;
+
+    margin-bottom:6px;
+
+}
+
+[data-testid="stSidebarNav"] a:hover{
+
+    background:#1E293B;
+
+}
+
+/* -----------------------------
    TITLES
------------------------------*/
+------------------------------*/
 
 .main-title{
 
@@ -65,7 +102,7 @@ section[data-testid="stSidebar"] *{
 
     color:white;
 
-    margin-bottom:5px;
+    margin-bottom:8px;
 
 }
 
@@ -73,7 +110,7 @@ section[data-testid="stSidebar"] *{
 
     text-align:center;
 
-    color:#cbd5e1;
+    color:#CBD5E1;
 
     font-size:18px;
 
@@ -81,47 +118,47 @@ section[data-testid="stSidebar"] *{
 
 }
 
-/* ----------------------------
+/* -----------------------------
    HEADINGS
------------------------------*/
+------------------------------*/
 
-h1,h2,h3,h4{
+h1,h2,h3,h4,h5,h6{
 
     color:white;
 
 }
 
-/* ----------------------------
-   CARDS
------------------------------*/
+/* -----------------------------
+   CARD
+------------------------------*/
 
 .card{
 
-    background:#1e293b;
+    background:#1E293B;
 
     border-radius:18px;
 
     padding:22px;
 
-    border-left:5px solid #3b82f6;
+    border-left:5px solid #3B82F6;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.35);
+    box-shadow:0 8px 18px rgba(0,0,0,.30);
 
-    transition:.25s;
+    transition:all .25s ease;
 
 }
 
 .card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
-    box-shadow:0 15px 30px rgba(59,130,246,.25);
+    box-shadow:0 10px 24px rgba(59,130,246,.30);
 
 }
 
 .metric-title{
 
-    color:#94a3b8;
+    color:#94A3B8;
 
     font-size:15px;
 
@@ -133,33 +170,31 @@ h1,h2,h3,h4{
 
     font-size:30px;
 
-    font-weight:bold;
+    font-weight:700;
 
     margin-top:8px;
 
 }
 
-/* ----------------------------
-   STREAMLIT METRICS
------------------------------*/
+/* -----------------------------
+   METRIC BOX
+------------------------------*/
 
 [data-testid="metric-container"]{
 
-    background:#1e293b;
+    background:#1E293B;
 
-    border-radius:15px;
+    border-radius:16px;
 
     padding:15px;
 
-    border-left:5px solid #3b82f6;
-
-    box-shadow:0 6px 18px rgba(0,0,0,.25);
+    border-left:4px solid #3B82F6;
 
 }
 
-/* ----------------------------
-   BUTTONS
------------------------------*/
+/* -----------------------------
+   BUTTON
+------------------------------*/
 
 .stButton>button{
 
@@ -171,7 +206,7 @@ h1,h2,h3,h4{
 
     border-radius:12px;
 
-    background:#2563eb;
+    background:#2563EB;
 
     color:white;
 
@@ -183,124 +218,112 @@ h1,h2,h3,h4{
 
 .stButton>button:hover{
 
-    background:#1d4ed8;
+    background:#1D4ED8;
 
 }
 
-/* ----------------------------
+/* -----------------------------
    INPUTS
------------------------------*/
+------------------------------*/
 
 .stTextInput input,
 .stNumberInput input{
 
-    background:#1e293b;
+    background:#1E293B !important;
 
-    color:white;
+    color:white !important;
 
-    border:1px solid #475569;
-
-}
-
-.stSelectbox div[data-baseweb="select"]{
-
-    background:#1e293b;
+    border:1px solid #475569 !important;
 
 }
 
 .stTextArea textarea{
 
-    background:#1e293b;
+    background:#1E293B !important;
 
-    color:white;
-
-}
-
-/* ----------------------------
-   SLIDER
------------------------------*/
-
-.stSlider{
-
-    padding-top:10px;
+    color:white !important;
 
 }
 
-/* ----------------------------
-   DATAFRAME
------------------------------*/
+div[data-baseweb="select"]{
 
-[data-testid="stDataFrame"]{
+    background:#1E293B !important;
 
-    border-radius:15px;
-
-    overflow:hidden;
+    color:white !important;
 
 }
 
-/* ----------------------------
-   PLOTLY
------------------------------*/
-
-.js-plotly-plot{
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-}
-
-/* ----------------------------
+/* -----------------------------
    ALERTS
------------------------------*/
+------------------------------*/
 
 [data-testid="stAlert"]{
 
-    border-radius:15px;
+    border-radius:14px;
 
 }
 
-/* ----------------------------
-   INFO BOXES
------------------------------*/
+/* -----------------------------
+   INFO
+------------------------------*/
 
 .stInfo{
 
-    background:#1e293b !important;
+    border-radius:14px;
 
 }
 
 .stSuccess{
 
-    background:#064e3b !important;
+    border-radius:14px;
 
 }
 
 .stWarning{
 
-    background:#78350f !important;
+    border-radius:14px;
 
 }
 
 .stError{
 
-    background:#7f1d1d !important;
+    border-radius:14px;
 
 }
 
-/* ----------------------------
-   IMAGES
------------------------------*/
+/* -----------------------------
+   DATAFRAME
+------------------------------*/
+
+[data-testid="stDataFrame"]{
+
+    border-radius:14px;
+
+}
+
+/* -----------------------------
+   IMAGE
+------------------------------*/
 
 img{
 
-    border-radius:15px;
+    border-radius:14px;
 
 }
 
-/* ----------------------------
-   HORIZONTAL LINE
------------------------------*/
+/* -----------------------------
+   PLOTLY
+------------------------------*/
+
+.js-plotly-plot{
+
+    border-radius:14px;
+
+}
+
+/* -----------------------------
+   HR
+------------------------------*/
 
 hr{
 
@@ -308,9 +331,9 @@ hr{
 
 }
 
-/* ----------------------------
+/* -----------------------------
    TABLE
------------------------------*/
+------------------------------*/
 
 table{
 
@@ -318,9 +341,29 @@ table{
 
 }
 
-/* ----------------------------
+/* -----------------------------
+   CODE
+------------------------------*/
+
+pre{
+
+    border-radius:10px;
+
+}
+
+/* -----------------------------
+   EXPANDER
+------------------------------*/
+
+.streamlit-expanderHeader{
+
+    color:white;
+
+}
+
+/* -----------------------------
    SCROLLBAR
------------------------------*/
+------------------------------*/
 
 ::-webkit-scrollbar{
 
@@ -330,7 +373,7 @@ table{
 
 ::-webkit-scrollbar-track{
 
-    background:#0f172a;
+    background:#111827;
 
 }
 
@@ -342,36 +385,16 @@ table{
 
 }
 
-/* ----------------------------
-   EXPANDER
------------------------------*/
-
-.streamlit-expanderHeader{
-
-    color:white;
-
-}
-
-/* ----------------------------
-   CODE BLOCK
------------------------------*/
-
-pre{
-
-    border-radius:12px;
-
-}
-
-/* ----------------------------
-   FOOTER
------------------------------*/
+/* -----------------------------
+   FOOTER TEXT
+------------------------------*/
 
 .footer{
 
     text-align:center;
 
-    color:#94a3b8;
+    color:#94A3B8;
 
-    margin-top:20px;
+    margin-top:25px;
 
 }
