@@ -1,96 +1,105 @@
-# 🏦 Credit Risk Prediction Dashboard
+# 🏦 AI-Based Credit Risk Prediction System
 
 <p align="center">
 
-![Python](https://img.shields.io/badge/Python-3.12+-blue?logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-RandomForest-orange?logo=scikitlearn)
-![SHAP](https://img.shields.io/badge/Explainable-AI-success)
-![License](https://img.shields.io/badge/License-MIT-green)
+<img src="https://img.shields.io/badge/Python-3.12-blue?logo=python">
+<img src="https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit">
+<img src="https://img.shields.io/badge/Scikit--Learn-Random%20Forest-orange?logo=scikitlearn">
+<img src="https://img.shields.io/badge/Explainable-AI-SHAP-success">
+<img src="https://img.shields.io/badge/Status-Live-brightgreen">
 
 </p>
 
-An end-to-end **Machine Learning Credit Risk Prediction Dashboard** built with **Python**, **Scikit-Learn**, **SHAP**, and **Streamlit**.
+An interactive **Machine Learning web application** that predicts the probability of **loan default** using a trained **Random Forest Classifier**.
 
-The application predicts the probability of loan default, estimates loan approval likelihood, explains predictions using SHAP, and visualizes model performance through an interactive dashboard.
+The project combines **Machine Learning**, **Explainable AI (SHAP)**, and a modern **Streamlit dashboard** to help understand credit risk predictions.
 
 ---
 
 # 🌐 Live Demo
 
-👉 https://credit-risk-modeling-zjcg9jpcnu2dcddb8ims3c.streamlit.app/
+### 🚀 Try the application here
+
+https://credit-risk-modeling-zjcg9jpcnu2dcddb8ims3c.streamlit.app/
 
 ---
 
 # 📸 Project Screenshots
 
-## 🏠 Home
+## 🏠 Home Dashboard
 
-![Home](screenshots/home.png)
-
----
-
-## 🏦 Loan Prediction
-
-![Prediction](screenshots/prediction.png)
+<img src="screenshots/home.png">
 
 ---
 
-## 📈 Model Performance
+## 📝 Loan Prediction
 
-![Performance](screenshots/performance.png)
-
----
-
-## 🔍 Feature Importance
-
-![Feature Importance](screenshots/feature_importance.png)
+<img src="screenshots/prediction.png">
 
 ---
 
-## ℹ️ About
+## 📊 Model Performance Dashboard
 
-![About](screenshots/about.png)
-
----
-
-# 🚀 Features
-
-- Predict loan default probability
-- Loan approval probability estimation
-- Credit score and credit grade generation
-- Random Forest based prediction
-- SHAP Explainability
-- Interactive Plotly charts
-- Model Performance Dashboard
-- Feature Importance Visualization
-- Streamlit Interactive UI
-- Responsive Dark Theme
+<img src="screenshots/performance.png">
 
 ---
 
-# 🧠 Machine Learning Pipeline
+## 🔍 Feature Importance & SHAP
 
-```
+<img src="screenshots/feature_importance.png">
+
+---
+
+## ℹ️ About Project
+
+<img src="screenshots/about.png">
+
+---
+
+# 🎯 Project Objective
+
+The objective of this project is to build an intelligent system that predicts whether a loan applicant is likely to default based on financial and credit-related information.
+
+Instead of providing only a prediction, the application also explains **why** the model made that decision using **SHAP Explainability**.
+
+---
+
+# ✨ Features
+
+- 🏦 Loan Default Prediction
+- 📈 Loan Approval Probability
+- 🎯 Random Forest Classifier
+- 🔍 SHAP Explainability
+- 📊 Interactive Plotly Charts
+- 📉 Model Performance Dashboard
+- 📋 Feature Importance Analysis
+- 🌙 Professional Dark Theme UI
+- ⚡ Fast Streamlit Deployment
+
+---
+
+# 🤖 Machine Learning Workflow
+
+```text
 Loan Dataset
       │
       ▼
 Data Cleaning
       │
       ▼
-Missing Value Handling
+Data Preprocessing
       │
       ▼
-Feature Engineering
+Missing Value Imputation
       │
       ▼
-Preprocessing
+One-Hot Encoding
       │
       ▼
 SMOTE
       │
       ▼
-Random Forest
+Random Forest Classifier
       │
       ▼
 Prediction
@@ -103,7 +112,7 @@ SHAP Explainability
 
 # 📂 Project Structure
 
-```
+```text
 Credit-Risk-Modeling/
 
 │
@@ -112,75 +121,80 @@ Credit-Risk-Modeling/
 ├── README.md
 │
 ├── assets/
-│   └── style.css
+│     └── style.css
 │
 ├── pages/
-│   ├── 1_Prediction.py
-│   ├── 2_Model_Performance.py
-│   ├── 3_Feature_Importance.py
-│   └── 4_About.py
+│     ├── 1_Prediction.py
+│     ├── 2_Model_Performance.py
+│     ├── 3_Feature_Importance.py
+│     └── 4_About.py
 │
 ├── models/
-│   ├── best_model.pkl
-│   └── preprocessor.pkl
+│     ├── best_model.pkl
+│     └── preprocessor.pkl
 │
 ├── notebook/
-│   ├── 01_Data_Understanding.ipynb
-│   ├── 02_EDA.ipynb
-│   ├── 03_Preprocessing.ipynb
-│   ├── 04_Model_Training.ipynb
-│   ├── 05_Model_Evaluation.ipynb
-│   └── 06_SHAP_Analysis.ipynb
+│     ├── 01_Data_Understanding.ipynb
+│     ├── 02_EDA.ipynb
+│     ├── 03_Preprocessing.ipynb
+│     ├── 04_Model_Training.ipynb
+│     ├── 05_Model_Evaluation.ipynb
+│     └── 06_SHAP_Analysis.ipynb
 │
 ├── data/
+│     └── processed/
 │
 ├── results/
+│     └── shap/
 │
 └── screenshots/
+      ├── home.png
+      ├── prediction.png
+      ├── performance.png
+      ├── feature_importance.png
+      └── about.png
 ```
 
 ---
 
 # 📊 Dataset
 
-Dataset used:
+**Dataset Used:** LendingClub Loan Dataset
 
-**LendingClub Loan Dataset**
-
-The dataset contains borrower financial information including:
+The dataset contains financial and credit information such as:
 
 - Annual Income
 - Loan Amount
 - Interest Rate
-- Debt-to-Income Ratio
-- Credit Grade
+- Debt-to-Income Ratio (DTI)
 - Employment Length
 - Home Ownership
 - Verification Status
-- Revolving Balance
+- Credit Grade
+- Loan Purpose
 - Public Records
 - Delinquencies
-- Loan Purpose
+- Revolving Balance
 
 ---
 
-# 🤖 Machine Learning Model
+# 🧠 Machine Learning Model
 
-Algorithm Used
+### Algorithm
 
 - Random Forest Classifier
 
-Preprocessing
+### Data Preprocessing
 
 - Missing Value Imputation
 - One-Hot Encoding
 - Feature Engineering
 
-Handling Imbalanced Data
+### Imbalanced Data Handling
 
 - SMOTE (Synthetic Minority Oversampling Technique)
 
-Explainability
+### Explainability
 
 - SHAP (SHapley Additive exPlanations)
 
@@ -188,29 +202,29 @@ Explainability
 
 # 📈 Model Evaluation
 
-Evaluation Metrics
+The model was evaluated using multiple metrics.
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC Score
-
-The dashboard provides a dedicated page to visualize model performance and compare evaluation metrics.
+| Metric | Purpose |
+|---------|----------|
+| Accuracy | Overall Correct Predictions |
+| Precision | Positive Prediction Quality |
+| Recall | Ability to Detect Defaults |
+| F1 Score | Precision & Recall Balance |
+| ROC-AUC | Model Discrimination Ability |
 
 ---
 
 # 🔍 Explainable AI (SHAP)
 
-The project integrates SHAP to improve transparency of model predictions.
+The dashboard integrates SHAP to explain model predictions.
 
-SHAP helps explain:
+SHAP helps identify:
 
-- Why a prediction was made
-- Which features increased default risk
-- Which features reduced default risk
-- Global feature importance
+- Features increasing loan default risk
+- Features reducing loan default risk
+- Overall feature importance
 - Local prediction explanation
+- Global model behaviour
 
 ---
 
@@ -219,14 +233,14 @@ SHAP helps explain:
 | Technology | Purpose |
 |------------|----------|
 | Python | Programming Language |
-| Streamlit | Web Application |
-| Pandas | Data Processing |
+| Streamlit | Web Dashboard |
+| Pandas | Data Analysis |
 | NumPy | Numerical Computing |
 | Scikit-Learn | Machine Learning |
 | Imbalanced-Learn | SMOTE |
 | SHAP | Explainable AI |
-| Plotly | Interactive Visualization |
-| Matplotlib | Charts |
+| Plotly | Interactive Charts |
+| Matplotlib | Data Visualization |
 | Joblib | Model Serialization |
 
 ---
@@ -239,7 +253,7 @@ Clone the repository
 git clone https://github.com/AnkitMaurya0/Credit-Risk-Modeling.git
 ```
 
-Move to project directory
+Move into the project directory
 
 ```bash
 cd Credit-Risk-Modeling
@@ -259,38 +273,43 @@ streamlit run app.py
 
 ---
 
-# 🎯 Future Improvements
+# 📌 Future Improvements
 
 - XGBoost Implementation
 - LightGBM Model
-- PDF Report Download
+- User Authentication
 - Database Integration
-- Authentication System
-- Cloud API Integration
-- Real Credit Bureau Score Integration
+- PDF Report Generation
+- Real Credit Bureau API
+- Loan Recommendation System
+- Cloud Database Support
 
 ---
 
 # ⚠️ Disclaimer
 
-This project is developed for educational, research, and demonstration purposes.
+This project is developed for **educational and research purposes only**.
 
-Predictions generated by this application should not be considered as final lending decisions. Final loan approval depends on lender policies, document verification, and regulatory guidelines.
+The prediction generated by this application is intended to assist decision-making and should **not** be considered as the final loan approval decision.
+
+Actual approval depends on lender policies, financial verification, regulatory requirements, and additional risk assessment.
 
 ---
 
 # 👨‍💻 Author
 
-**Ankit Maurya**
+## Ankit Maurya
 
-B.Tech – Artificial Intelligence & Machine Learning
+**B.Tech – Artificial Intelligence & Machine Learning**
 
-GitHub: https://github.com/AnkitMaurya0
+GitHub
 
-LinkedIn: *(Add your LinkedIn profile here)*
+https://github.com/AnkitMaurya0
 
 ---
 
-## ⭐ Support
+## ⭐ If you like this project
 
-If you found this project helpful, please consider giving it a ⭐ on GitHub.
+Please consider giving this repository a **Star ⭐**.
+
+It motivates me to build more Machine Learning projects.
