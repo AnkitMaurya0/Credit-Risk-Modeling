@@ -1,0 +1,19 @@
+# Raw Dataset
+data/raw/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Streamlit cache
+.streamlit/
+
+# Virtual environment
+venv/
+.env
